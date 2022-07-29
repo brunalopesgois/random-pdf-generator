@@ -1,10 +1,11 @@
+import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 
 import { PdfController } from '../controllers';
 import { PdfService } from '../services';
 
 @Module({
-  imports: [],
+  imports: [HttpModule],
   controllers: [PdfController],
   providers: [PdfService],
 })
